@@ -2,7 +2,7 @@
 
 **PREREQUISITES:**
 
-Before running this demo, you must have completed the demo setup documentation: [Setup environment](../setup.md)
+Before running this demo, you must have completed the demo setup documentation: [Setup environment](./setup.md)
 
 **INTRODUCTION:**
 
