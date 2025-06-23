@@ -36,21 +36,23 @@ At the end of this demo, you should be able to showcase how to:
 
 a.  Open a new **terminal** window and Launch **IBM Installation Manager**
 
-> 
->
-> /home/techzone/IBM/InstallationManager_Group/eclipse/IBMIM
+```
+/home/techzone/IBM/InstallationManager_Group/eclipse/IBMIM
+```
 
 b.  Click the **Uninstall** option. DO NOT UNINSTALL ANY COMPONENTS!
 
 c.  Review the installed components
 
-> ![](./media/media/image2.png)
->
-> Alternatively, you could use the command imcl listInstalledPackages instead:
->
-> (Use the option -long to get additional information)
->
-> /home/techzone/IBM/InstallationManager_Group/eclipse/tools/imcl listInstalledPackages -long
+![](./media/media/image2.png)
+
+Alternatively, you could use the command imcl listInstalledPackages instead:
+
+(Use the option -long to get additional information)
+
+```
+/home/techzone/IBM/InstallationManager_Group/eclipse/tools/imcl listInstalledPackages -long
+```
 
 2.  Start if needed the WebSphere Application Server, view the installed applications
 
@@ -60,27 +62,38 @@ a.  Check the status of your application server environment and if necessary, st
 
 Deployment manager
 
-> To check the status:
->
-> /home/techzone/IBM/WebSphere/AppServer/profiles/Dmgr01/bin/serverStatus.sh -all
->
-> To start the Dmgr:
->
-> /home/techzone/IBM/WebSphere/AppServer/profiles/Dmgr01/bin/startManager.sh
+To check the status:
+
+```
+/home/techzone/IBM/WebSphere/AppServer/profiles/Dmgr01/bin/serverStatus.sh -all
+```
+
+To start the Dmgr:
+
+```
+/home/techzone/IBM/WebSphere/AppServer/profiles/Dmgr01/bin/startManager.sh
+```
 
 Node agent
 
-> To check the status: /home/techzone/IBM/WebSphere/AppServer/profiles/AppSrv01/bin/serverStatus.sh -all
->
-> To start the Node agent:
->
-> /home/techzone/IBM/WebSphere/AppServer/profiles/AppSrv01/bin/startNode.sh
+To check the status: 
+```
+/home/techzone/IBM/WebSphere/AppServer/profiles/AppSrv01/bin/serverStatus.sh -all
+```
+
+To start the Node agent:
+
+```
+/home/techzone/IBM/WebSphere/AppServer/profiles/AppSrv01/bin/startNode.sh
+```
 
 b.  Launch the **Chrome** browser in the demo environment
 
 c.  Navigate to the **WebSphere Admin Console**, and login, if not already logged in.
 
-> <https://localhost:9043/ibm/console>
+```
+https://localhost:9043/ibm/console
+```
 >
 > User ID: techzone
 >
@@ -95,8 +108,8 @@ e.  Start **server1** that is running on traditional WebSphere 9.0.0.5.23
 f.  Navigate to **Applications \> All applications**
 
 > The Mod Resorts Java 8 application should be **running**
->
-> ![](./media/media/image3.png)
+
+![](./media/media/image3.png)
 
 3.  Run the original version of Mod Resorts application
 
@@ -110,7 +123,7 @@ b.  Navigate to the original Mod Resorts application running on WebSphere Applic
 
 4.  Enable the command assistant so that you can see the wsadmin commands related to the steps done in the console.
 
-    a.  Navigate to **System administration \> Console Preferences.\**
+    a.  Navigate to **System administration \> Console Preferences.**
         Select the preferences **Enable command assistant notification** and **Log command assistance commands**, then click on **Apply**.
 
 > ![](./media/media/image5.png)
@@ -122,11 +135,11 @@ b.  Navigate to the original Mod Resorts application running on WebSphere Applic
 a.  From the WAS Admin Console, navigate to **Servers \> Server Types \> WebSphere application Servers**
 
 b.  Click the **New...** Button
-
+ 
 c.  Select **Managed Liberty server** from the drop-down menu
 
-> ![](./media/media/image6.png)
->
+![](./media/media/image6.png)
+
 > Complete the steps in the "**Create a new application server**" dialog to create the managed Liberty Server
 
 d.  **Step 1:** Select a node and specify managed Liberty server name (Node must be running 9.0.5.23 or higher)
@@ -169,7 +182,7 @@ k.  When the configuration synchronization is complete, click the **OK** button\
 
 l.  The new managed Liberty server is now created, and in the "**stopped**" state
 
-> ![](./media/media/image11.png)
+![](./media/media/image11.png)
 
 6.  Install a modernized version of mod resorts application (java 17 / Jakarta EE 10) to the managed Liberty server
 
@@ -177,33 +190,33 @@ l.  The new managed Liberty server is now created, and in the "**stopped**" stat
 
     b.  Click the **New Enterprise Application** link and complete the steps in the **install application dialog**
 
-    c.  [Path to the new application]{.underline}:
+    c.  [Path to the new application]:
 
-        - Click the **Choose** **File** button and navigate to the modernized Mod Resorts WAR file on the local demo environment.
+    - Click the **Choose** **File** button and navigate to the modernized Mod Resorts WAR file on the local demo environment.
 
 > **HOME \> techzone \> demos \> ManagedLiberty-MoRE \> modresorts-2.0.0-java17.war**
 
 - Then click the **Select** button on the **Open File** dialog.
 
-d.  [Target Runtime Environment]{.underline}
+d.  [Target Runtime Environment]
 
-    - Select **WebSphere Liberty** from the list of Target Runtimes\
+- Select **WebSphere Liberty** from the list of Target Runtimes\
       \
-      ![](./media/media/image12.png)\
+    ![](./media/media/image12.png)\
       \
-      Then click the **Next** button
+    Then click the **Next** button
 
-e.  [How do you want to install the application]{.underline}
+e.  [How do you want to install the application]
 
-    - Select the **Fast Path** radio button as the installation options.
+- Select the **Fast Path** radio button as the installation options.
 
-    - Then click the **Next** button
+- Then click the **Next** button
 
-f.  [Step 1: Select installation options]{.underline}
+f.  [Step 1: Select installation options]
 
 - Accept the default values and click the **Next** button
 
-  a.  [Step 2: Map modules to servers]{.underline}
+  a.  [Step 2: Map modules to servers]
 
 - **Check** the box next to the modresorts-2.0.0 module
 
@@ -215,19 +228,19 @@ f.  [Step 1: Select installation options]{.underline}
 
 > ![](./media/media/image13.png)
 
-a.  [Step 3: map Context roots for web modules]{.underline}
+a.  [Step 3: map Context roots for web modules]
 
 - **Accept** the default context root of "**/resorts**" for the web module
 
 - Click **Next** to continue
 
-  a.  [Step 4: Summary]{.underline}
+  a.  [Step 4: Summary]
 
-      - On the summary page, click on **View administrative scripting command for last action**.\
+    - On the summary page, click on **View administrative scripting command for last action**.\
         \
         ![](./media/media/image14.png)
 
-      - The wsadmin command to install an application to the Liberty server is shown.
+    - The wsadmin command to install an application to the Liberty server is shown.
 
 > ![](./media/media/image15.png)
 
@@ -267,7 +280,7 @@ b.  Note the following in the log:
 
 - The URL for the mod resorts application is: <http://rhel9-base.gym.lan:9081/resorts>
 
-> ![](./media/media/image17.png)
+![](./media/media/image17.png)
 
 9.  Run the modernized Mod Resorts application on the new managed Liberty Server
 
@@ -275,7 +288,7 @@ b.  Note the following in the log:
 
     b.  Go to URL: <http://rhel9-base.gym.lan:9081/resorts>
 
-> ![](./media/media/image18.png)
+![](./media/media/image18.png)
 
 10. Summary
 
@@ -296,18 +309,17 @@ Now some extended stuff:
     a.  Navigate to **Servers \> All servers**
 
     b.  Click on the managed Liberty server "**LibertyServer2**" from the server list.\
-        \
-        \
-        ![](./media/media/image19.png)
+
+    ![](./media/media/image19.png)
 
     c.  Your panel should look like this:\
-        ![](./media/media/image20.png)
+    ![](./media/media/image20.png)
 
     d.  Click on **Ports**
 
     e.  Click on **Port Name** to change the sorting. Now you shozkld see the WC_defaulthost close the top. As you can see the port is shown as 9081. Click on **WC_defaulthost**.**\
         \**
-        ![](./media/media/image21.png)
+    ![](./media/media/image21.png)
 
     f.  Change the port from 9081 to 9082.\
         \
@@ -367,31 +379,35 @@ Now some extended stuff:
 
     j.  By adding the Liberty port 9082 to virtual hosts and installing an HTTP Server with the updated plug-in, the created Liberty instance becomes part of the load balancing without any additional effort like plug-in merge or so.
 
-> Optional lab:
->
-> **Use Application Modernization Accelerator to analyze applications**
->
-> **Step 1: Install Application Modernization Accelerator.**
+Optional lab:
+
+**Use Application Modernization Accelerator to analyze applications**
+
+**Step 1: Install Application Modernization Accelerator.**
 
 1.  Open a terminal window in the VM.
 
 2.  Download and extract the Application Accelerator package
 
-> mkdir \~/ama42
->
-> cd \~/ama42
->
-> wget https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/ta/application-modernization-accelerator-local-4.2.0.zip
->
-> unzip application-modernization-accelerator-local-4.2.0.zip
->
-> cd application-modernization-accelerator-local-4.2.0/
+```
+mkdir \~/ama42
+
+cd \~/ama42
+
+wget https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/ta/application-modernization-accelerator-local-4.2.0.zip
+
+unzip application-modernization-accelerator-local-4.2.0.zip
+
+cd application-modernization-accelerator-local-4.2.0/
+```
 
 3.  Execute the following command to start the installation
 
-> ./launch.sh
->
-> In the wizard, perform the following steps:
+```
+./launch.sh
+```
+
+In the wizard, perform the following steps:
 
 - Enter **1** for 1) IBM Application Modernization Accelerator 4.2 (Evaluation)
 
@@ -399,184 +415,184 @@ Now some extended stuff:
 
 - Enter **1** to install AMA
 
-> Finally you should see something like
->
+Finally you should see something like
+
 > **Application Modernization Accelerator 4.2.0 is available for use\
 > at the following URL\> https://rhel9-base.gym.lan:443**
 
 4.  Access AMA from a browser via URL https://rhel9-base.gym.lan:443.
 
-> **Step 2: Create a workspace with sample content**
->
-> In AMA, click von **Create workspace** to create a workspace.
->
-> ![](./media/media/image35.png)
->
-> Enter as workspace name **samples** and select to include **sample data**, then click **Create**.\
-> \
-> ![](./media/media/image36.png)
->
-> Once the workspace has been created and the sample data has been imported and analyzed, you should get a visualization view.
->
-> **Step 3: Analyze the applications**
->
-> ![](./media/media/image37.png)
->
-> Connection groups help to see which applications are connected to each other.
->
-> Open the menu on the left and select **Connected_Group_A**.
->
-> ![](./media/media/image38.png)
->
-> You can see that two applications are connected to each other via queue.
->
-> This insight might help you if you want to move one of the applications including messaging system into the cloud or into containers.
->
-> Switch back to the overall view by clicking on **Applications**.
->
-> ![](./media/media/image39.png)
->
-> Now let's take a look at the modresorts application.
->
-> Type **mod** into the search bar to find the modresorts application
->
-> ![](./media/media/image40.png)
->
-> As you can see, the application has a dependency on a database and a queue.
->
-> Click on **Assessment** to see the efforts to migrate to Liberty or MoRE.
->
-> Then close the tree with the connected groups.
->
-> ![](./media/media/image41.png)
->
-> Select **Liberty administered from WebSphere (MoRE)** to see the assessment for target MoRE.
->
-> ![](./media/media/image42.png)
->
-> Scroll down to see the applications that could be migrated to MoRE.
->
-> To filter, enter **modr** into the search bar.
->
-> ![](./media/media/image43.png)
->
-> As you can see, the sample collection contains two modresorts applications.
->
-> Hover over the one in grey and you will get the information that the application has not been assessed for MoRE.
->
-> ![](./media/media/image44.png
->
-> This means that the data collection was created with an older version of the data collector tool.
->
-> Click on the modresorts application that has been assessed for target MoRE.
->
-> ![](./media/media/image45.png)
->
-> On the application details page, scroll down to the section with unique code issues.
->
-> ![](./media/media/image46.png)
->
-> As you can see, there is some manual effort is to migrate the application to Jakarta EE 10. The changes to migrate from Java 8 to Java 17 can be automated.
->
-> Click on **View migration plan** to see the migration plan.
->
-> ![](./media/media/image47.png)
->
-> ![](./media/media/image48.png)
->
-> On the Migration plan page, ou can see that a server.xml file has been created. This will help the developer to test the application locally in his development environment based on Liberty before deplying it to MoRE.
->
-> Click on **server.xml** to open the file.
->
-> ![](./media/media/image49.png)
->
-> Cleanup:
->
-> Click on **Home** to switch back to the main screen.
->
-> ![](./media/media/image50.png)
->
-> **This concludes the lab.**
->
-> Optional lab:
->
-> **Use Application Modernization Accelerator to create a data collection.**
->
-> **Step 1: Create a workspace without sample content**
->
-> In AMA, click von **Create workspace** to create a workspace.
->
-> ![](./media/media/image35.png)
->
-> Enter as workspace name **wasnd** but do not select include **sample data**, then click **Create**.\
-> ![](./media/media/image51.png)
+**Step 2: Create a workspace with sample content**
 
+In AMA, click von **Create workspace** to create a workspace.
+
+![](./media/media/image35.png)
+
+Enter as workspace name **samples** and select to include **sample data**, then click **Create**.
+
+![](./media/media/image36.png)
+
+Once the workspace has been created and the sample data has been imported and analyzed, you should get a visualization view.
+
+**Step 3: Analyze the applications**
+
+![](./media/media/image37.png)
+
+Connection groups help to see which applications are connected to each other.
+
+Open the menu on the left and select **Connected_Group_A**.
+
+![](./media/media/image38.png)
+
+You can see that two applications are connected to each other via queue.
+
+This insight might help you if you want to move one of the applications including messaging system into the cloud or into containers.
+
+Switch back to the overall view by clicking on **Applications**.
+
+![](./media/media/image39.png)
+
+Now let's take a look at the modresorts application.
+
+Type **mod** into the search bar to find the modresorts application
+
+![](./media/media/image40.png)
+
+As you can see, the application has a dependency on a database and a queue.
+
+Click on **Assessment** to see the efforts to migrate to Liberty or MoRE.
+
+Then close the tree with the connected groups.
+
+![](./media/media/image41.png)
+
+Select **Liberty administered from WebSphere (MoRE)** to see the assessment for target MoRE.
+
+![](./media/media/image42.png)
+
+Scroll down to see the applications that could be migrated to MoRE.
+
+To filter, enter **modr** into the search bar.
+
+![](./media/media/image43.png)
+
+As you can see, the sample collection contains two modresorts applications.
+
+Hover over the one in grey and you will get the information that the plication has not been assessed for MoRE.
+
+![](./media/media/image44.png
+
+This means that the data collection was created with an older version of the ta collector tool.
+
+Click on the modresorts application that has been assessed for target MoRE.
+
+![](./media/media/image45.png)
+
+On the application details page, scroll down to the section with unique code sues.
+
+![](./media/media/image46.png)
+
+As you can see, there is some manual effort is to migrate the application to karta EE 10. The changes to migrate from Java 8 to Java 17 can be automated.
+
+Click on **View migration plan** to see the migration plan.
+
+![](./media/media/image47.png)
+
+![](./media/media/image48.png)
+
+On the Migration plan page, ou can see that a server.xml file has been created. is will help the developer to test the application locally in his development vironment based on Liberty before deplying it to MoRE.
+
+Click on **server.xml** to open the file.
+
+![](./media/media/image49.png)
+
+Cleanup:
+
+Click on **Home** to switch back to the main screen.
+
+![](./media/media/image50.png)
+
+**This concludes the lab.**
+
+Optional lab:
+
+**Use Application Modernization Accelerator to create a data collection.**
+
+**Step 1: Create a workspace without sample content**
+
+In AMA, click von **Create workspace** to create a workspace.
+
+![](./media/media/image35.png)
+
+Enter as workspace name **wasnd** but do not select include **sample data**, en click **Create**.\
+![](./media/media/image51.png)
 **\**
 
-> **Step 2: Download the data collector**
->
-> Click on **Open Discovery Tool**
->
-> ![](./media/media/image52.png)
->
-> Keep the OS to Linux and select to download the discovery tool.
->
-> ![](./media/media/image53.png)
->
-> Make sure that **Downloads** is selected as target and click on **Save**.
->
-> ![](./media/media/image54.png)
->
-> **Step 3: Extract the data collector**
+**Step 2: Download the data collector**
+
+Click on **Open Discovery Tool**
+
+![](./media/media/image52.png)
+
+Keep the OS to Linux and select to download the discovery tool.
+
+![](./media/media/image53.png)
+
+Make sure that **Downloads** is selected as target and click on **Save**.
+
+![](./media/media/image54.png)
+
+**Step 3: Extract the data collector**
 
 1.  Open a terminal window in the VM.
 
 2.  Download and extract the Application Accelerator package
 
-> mkdir \~/ama42collector
->
-> cd \~/ama42collector
->
-> tar -zxf \~/Downloads/transformationadvisor-Linux_wasnd.tgz
->
-> cd transformationadvisor-4.2.0/
+```mkdir \~/ama42collector
+cd \~/ama42collector
+tar -zxf \~/Downloads/transformationadvisor-Linux_wasnd.tgz
+cd transformationadvisor-4.2.0/
+```
 
 3.  Execute the following command to see the options.
 
-> bin/transformationadvisor \--help collection.
->
-> Press **1** to accept the license agreement.
+```
+bin/transformationadvisor \--help collection.
+```
+Press **1** to accept the license agreement.
 
 4.  Execute the following command to create the collection.
 
-> bin/transformationadvisor -w /home/techzone/IBM/WebSphere/AppServerlection.
->
-> A panel will open to show that one profile and 2 applications have been found. Wait until the analysis has been done.
->
-> Finally you will get a message that the data collection was generated and uploaded.
->
-> ![](./media/media/image55.png)
->
-> **Step 4: View the collection in AMA**
->
-> Switch back to the browser window with AMA.
->
-> In the wasnd workspace, you should find the visualization of the two applications DefaultApplication and modresorts.
->
-> ![](./media/media/image56.png)
->
-> Switch to **Assessment** to see the assessment results.
->
-> ![](./media/media/image57.png)
->
-> Select **Liberty administered from WebSphere (MoRE)** to see the assessment for target MoRE.
->
-> ![](./media/media/image58.png)
->
-> Scroll down to see for each application the efforts by modernization target.
->
-> ![](./media/media/image59.png)
->
-> Feel free to investigate further into the applications.
->
-> **This concludes the lab.**
+```
+bin/transformationadvisor -w /home/techzone/IBM/WebSphere/AppServerlection.
+```
+
+A panel will open to show that one profile and 2 applications have been found. Wait until the analysis has been done.
+
+Finally you will get a message that the data collection was generated and uploaded.
+
+![](./media/media/image55.png)
+
+**Step 4: View the collection in AMA**
+
+Switch back to the browser window with AMA.
+
+In the wasnd workspace, you should find the visualization of the two plications DefaultApplication and modresorts.
+
+![](./media/media/image56.png)
+
+Switch to **Assessment** to see the assessment results.
+
+![](./media/media/image57.png)
+
+Select **Liberty administered from WebSphere (MoRE)** to see the assessment for rget MoRE.
+
+![](./media/media/image58.png)
+
+Scroll down to see for each application the efforts by modernization target.
+
+![](./media/media/image59.png)
+
+Feel free to investigate further into the applications.
+
+**This concludes the lab.**
